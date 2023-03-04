@@ -7,8 +7,10 @@ int z1 = Coord("Введите координату z1: ");
 int x2 = Coord("Введите координату х2: ");
 int y2 = Coord("Введите координату у2: ");
 int z2 = Coord("Введите координату z2: ");
+
 //Вывод ответа
 Console.WriteLine($"Расстояние между точками ({x1}, {y1}, {z1}) и ({x2}, {y2}, {z2}) {Dist(x1, y1, z1, x2, y2, z2)}");
+
 //Обработка ввода координат
 static int Coord(string message)
 {
@@ -26,6 +28,7 @@ static int Coord(string message)
         }
     }
 }
+
 //Рассчет расстояния
 static double Dist(int x1, int y1, int z1, int x2, int y2, int z2)
 {
