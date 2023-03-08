@@ -7,10 +7,13 @@ FillArray(array);
 //Выводим массив
 Console.WriteLine($"[{String.Join(",", array)}]");
 //Предлагаем отсортировать
-//Console.Write("Хотите отсортировать массив?(Y/N): ");
-BubbleSort(array);
-Console.WriteLine($"[{String.Join(",", array)}]");
-
+Console.Write("Если хотите отсортировать массив введите Y: ");
+string vybor = Console.ReadLine();
+if (vybor == "Y" || vybor == "y")
+{
+    BubbleSort(array);
+    Console.WriteLine($"[{String.Join(",", array)}]");
+}
 void FillArray(int[] array)
 {
     int length = array.Length;
