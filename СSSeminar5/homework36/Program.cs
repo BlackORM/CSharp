@@ -5,11 +5,9 @@ int minValue = InputNumber("Введите минимальный элемент
 int maxValue = InputNumber("Введите максимальный элемент массива: ", "Ошибка ввода данных!");
 int[] array = GetArray(num, minValue, maxValue);
 int result = SumOddElements(array);
-Console.WriteLine($"Сумма элементов на нечетных позициях массива [{string.Join(" ,", array)}] равна {result}");
+Console.WriteLine($"Сумма элементов на нечетных позициях массива [{string.Join(" ,", array)}] = {result}");
 
-
-
-static int InputNumber(string message, string errormessage)
+int InputNumber(string message, string errormessage)
 {
     while (true)
     {
