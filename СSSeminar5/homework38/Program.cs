@@ -9,7 +9,7 @@ if (col > 15) col = 15;
 double[] array = GetArray(num, col);
 double arrMin = FindMin(array);
 double arrMax = FindMax(array);
-double diff = arrMax - arrMin;
+double diff = Math.Round(arrMax - arrMin, col);
 
 Console.WriteLine($"Разница между мин элементом {arrMin} и макс элементом {arrMax} массива [{string.Join(" ,", array)}] = {diff}");
 
