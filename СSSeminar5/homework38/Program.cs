@@ -14,7 +14,7 @@ double diff = arrMax - arrMin;
 Console.WriteLine($"Разница между мин элементом {arrMin} и макс элементом {arrMax} массива [{string.Join(" ,", array)}] = {diff}");
 
 
-static int InputNumber(string message, string errormessage)
+int InputNumber(string message, string errormessage)
 {
     while (true)
     {
