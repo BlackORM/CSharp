@@ -1,9 +1,12 @@
 ﻿// Количество четных чисел в рандомном массиве из 3-значных чисел
 Console.Clear();
-int num = InputNumber("Введите длинну массива: ", "Ошибка ввода данных!");
+//Вводим длину массива
+int num = InputNumber("Введите длину массива: ", "Ошибка ввода данных!");
+//Заполняем рандомно трехзначными
 int[] array = GetArray(num, 100, 999);
-Console.WriteLine(string.Join(" ,", array));
+//Запускаем метод подсчета четных чисел
 int result = CountEven(array);
+//Вывод на экран
 Console.WriteLine($"В массиве [{string.Join(" ,", array)}] четных чисел {result}");
 
 static int InputNumber(string message, string errormessage)
@@ -28,7 +31,7 @@ int[] GetArray(int size, int minValue, int maxValue)
     }
     return res;
 }
-
+//Метод подсчета четных чисел 
 int CountEven(int[] arr)
 {
     int count = 0;
