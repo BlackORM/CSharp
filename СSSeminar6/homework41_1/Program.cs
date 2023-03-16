@@ -8,7 +8,7 @@ for (int i = 0; i < userCount; i++)
 {
     userNumbers[i] = InputNumber("Введите целое число: ", "Ошибка ввода данных!");
 }
-int positiveNumbers = CountPositiveNumber(int[] userNumbers);
+int positiveNumbers = CountPositiveNumber(userNumbers);
 Console.WriteLine($"В массиве [{string.Join(" ,", userNumbers)}] положительных чисел {positiveNumbers}");
 
 int CountPositiveNumber(int[] userArray)
