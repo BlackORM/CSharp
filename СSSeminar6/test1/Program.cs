@@ -1,6 +1,11 @@
 ﻿//
 Console.Clear();
-int num = InputNumber("Введите число для перевода в двоичную систему: ", "Ошибка ввода данных!");
+int a = InputNumber("Введите первую сторону треугольника: ", "Ошибка ввода данных!");
+int b = InputNumber("Введите первую сторону треугольника: ", "Ошибка ввода данных!");
+int c = InputNumber("Введите первую сторону треугольника: ", "Ошибка ввода данных!");
+bool isTriangle = IsTriangle(a, b, c);
+Console.WriteLine(isTriangle? "да":"нет");
+
 
 
 
@@ -10,31 +15,17 @@ int InputNumber(string message, string errormessage)
     {
         Console.Write(message);
         bool isCorrect = int.TryParse(Console.ReadLine(), out int userNumber);
-        if (isCorrect)
+        if (isCorrect && userNumber > 0)
             return userNumber;
         Console.WriteLine(errormessage);
     }
 }
 
-void ReversArray(int[] arr)
+bool IsTriangle(int a, int b, int c)
 {
-    int result[] = new int[arr.Length];
-    for (int i = 0; i < arr.Length; i++)
+    if (a + b > c && a + c > b && b + c > a)
     {
-        result[i] = arr[arr.Length - i - 1];
+        return true;
     }
-    return result;
+    else return false;
 }
-
-void ReversArray2(int[] arr)
-{
-    for (int i = 0; i < arr.Length / 2; i++)
-    {
-        int a = arr[i];
-        arr[i] = arr[arr.Length - i - 1];
-        arr[arr.Length - i - 1] = a;
-    }
-}
-
-
-
