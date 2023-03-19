@@ -14,10 +14,9 @@ int maxValue = InputNumber("Введите конец диапазона слу�
 
 int[,] array = GetArray(row, col, minValue, maxValue);
 
-
 int userRow = InputPositiveNumber("Введите номер строки: ", "Ошибка ввода данных!");
-
 int userCol = InputPositiveNumber("Введите номер столбца: ", "Ошибка ввода данных!");
+
 if (userRow > array.GetLength(0) || userCol > array.GetLength(1))
 {
     Console.WriteLine("Нет такой позиции в массиве");
