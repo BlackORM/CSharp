@@ -10,7 +10,6 @@ double[,] array = GetDoubleArray(row, col, minValue, maxValue);
 //выводим массив 
 PrintArray(array);
 
-Console.Write("Введите количество знаков после запятой: ");
 int numDigits = InputPositiveNumber("Введите количество знаков после запятой: ", "Ошибка ввода данных!");
 //выводим массив с округлением до заданного количества цифр после запятой
 PrintRoundArray(array, numDigits);
