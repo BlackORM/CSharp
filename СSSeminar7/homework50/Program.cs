@@ -12,11 +12,14 @@ int col = InputPositiveNumber("Введите количество столбц�
 int minValue = InputNumber("Введите начало диапазона случайных чисел: ", "Ошибка ввода данных!");
 int maxValue = InputNumber("Введите конец диапазона случайных чисел: ", "Ошибка ввода данных!");
 
+//создаем массив
 int[,] array = GetArray(row, col, minValue, maxValue);
 
+//вводим индексы элемента
 int userRow = InputPositiveNumber("Введите номер строки: ", "Ошибка ввода данных!");
 int userCol = InputPositiveNumber("Введите номер столбца: ", "Ошибка ввода данных!");
 
+//проверяем на существование и выводим
 if (userRow > array.GetLength(0) || userCol > array.GetLength(1))
 {
     Console.WriteLine("Нет такой позиции в массиве");
@@ -40,6 +43,7 @@ int InputNumber(string message, string errormessage)
         Console.WriteLine(errormessage);
     }
 }
+
 //ввод и проверка ввода положительных чисел для строк и столбцов
 int InputPositiveNumber(string message, string errormessage)
 {
@@ -52,6 +56,7 @@ int InputPositiveNumber(string message, string errormessage)
         Console.WriteLine(errormessage);
     }
 }
+
 //генерация массива
 int[,] GetArray(int m, int n, int minValue, int maxValue)
 {
@@ -66,6 +71,7 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
     }
     return result;
 }
+
 //вывод массива
 void PrintArray(int[,] inArray)
 {
