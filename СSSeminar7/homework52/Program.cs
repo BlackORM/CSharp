@@ -77,6 +77,7 @@ void PrintArray(int[,] inArray)
         Console.WriteLine();
     }
 }
+
 // считаем среднее арифметическое в столбце
 double[] AverageCol(int[,] array)
 {
