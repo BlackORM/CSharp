@@ -24,19 +24,6 @@ Console.WriteLine();
 Console.WriteLine($"Среднее арифметическое каждого столбца: ");
 PrintRoundArray(sum, digits);
 
-// ввод и проверка ввода целых чисел
-int InputNumber(string message, string errormessage)
-{
-    while (true)
-    {
-        Console.Write(message);
-        bool isCorrect = int.TryParse(Console.ReadLine(), out int userNumber);
-        if (isCorrect)
-            return userNumber;
-        Console.WriteLine(errormessage);
-    }
-}
-
 // ввод и проверка ввода положительных чисел для строк и столбцов
 int InputPositiveNumber(string message, string errormessage)
 {
