@@ -5,12 +5,15 @@ int row = InputPositiveNumber("Введите количество строк м
 int col = InputPositiveNumber("Введите количество столбцов массива: ", "Ошибка ввода данных!");
 int minValue = InputNumber("Введите начало диапазона случайных чисел: ", "Ошибка ввода данных!");
 int maxValue = InputNumber("Введите конец диапазона случайных чисел: ", "Ошибка ввода данных!");
+
 //создаем двумерный массив случайных вещественных чисел
 double[,] array = GetDoubleArray(row, col, minValue, maxValue);
+
 //выводим массив 
 PrintArray(array);
 
 int numDigits = InputPositiveNumber("Введите количество знаков после запятой: ", "Ошибка ввода данных!");
+
 //выводим массив с округлением до заданного количества цифр после запятой
 PrintRoundArray(array, numDigits);
 
@@ -26,6 +29,7 @@ int InputNumber(string message, string errormessage)
         Console.WriteLine(errormessage);
     }
 }
+
 //ввод и проверка ввода положительных чисел для строк и столбцов
 int InputPositiveNumber(string message, string errormessage)
 {
@@ -38,6 +42,7 @@ int InputPositiveNumber(string message, string errormessage)
         Console.WriteLine(errormessage);
     }
 }
+
 //генерация массива
 double[,] GetDoubleArray(int m, int n, int minValue, int maxValue)
 {
@@ -51,6 +56,7 @@ double[,] GetDoubleArray(int m, int n, int minValue, int maxValue)
     }
     return result;
 }
+
 //вывод массива
 void PrintArray(double[,] inArray)
 {
@@ -63,6 +69,7 @@ void PrintArray(double[,] inArray)
         Console.WriteLine();
     }
 }
+
 //вывод массива с округлением
 void PrintRoundArray(double[,] inArray, int digits)
 {
