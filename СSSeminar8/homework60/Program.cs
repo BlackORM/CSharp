@@ -50,24 +50,24 @@ int[,,] Get3DigitArray(int row, int col, int sh, int[] inArray)
 // генерация массива неповторяющихся двузначных чисел
 void Get2DigitArray(int[] resultArray, int minValue, int maxValue)
 {
+    int temp;
     for (int i = 0; i < resultArray.Length; i++)
     {
-        int random = 0;
-        bool nonRepeat = true;
-        while (nonRepeat)
+        resultArray[i] = new Random().Next(minValue, maxValue + 1);
+        temp = resultArray[i];
+        if (i > 0)
         {
-            random = new Random().Next(minValue, maxValue + 1);
-            nonRepeat = false;
             for (int j = 0; j < i; j++)
             {
-                if (resultArray[j] == random)
+                while (resultArray[i] == resultArray[j])
                 {
-                    nonRepeat = true;
-                    break;
+                    resultArray[i] = new Random().Next(minValue, maxValue + 1);
+                    j = 0;
+                    temp = resultArray[i];
                 }
+                temp = resultArray[i];
             }
         }
-        resultArray[i] = random;
     }
 }
 
