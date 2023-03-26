@@ -1,7 +1,7 @@
 ﻿// Сумма цифр введенного числа через рекурсию
 Console.Clear();
 
-int number = InputNumber("Введите первое число: ", "Ошибка ввода данных!");
+int number = InputNumber("Введите число: ", "Ошибка ввода данных!");
 int result = SumDigits(number);
 Console.WriteLine($"Сумма цифр числа {number} = {Math.Abs(result)}");
 
