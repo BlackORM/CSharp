@@ -13,9 +13,7 @@ if (M > N)
 }
 
 string result = NumbersFromMtoN(M, N);
-
 Console.WriteLine($"Натуральные числа от {M} до {N}: {result}");
-
 
 string NumbersFromMtoN(int m, int n)
 {
