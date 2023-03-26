@@ -2,8 +2,8 @@
 
 Console.Clear();
 
-int M = InputPositiveNumber("Введите первое число: ", "Ошибка ввода данных!");
-int N = InputPositiveNumber("Введите второе число: ", "Ошибка ввода данных!");
+int M = InputNumber("Введите первое число: ", "Ошибка ввода данных!");
+int N = InputNumber("Введите второе число: ", "Ошибка ввода данных!");
 
 if (M > N)
 {
@@ -24,16 +24,15 @@ string NumbersFromMtoN(int m, int n)
     else return m + ", " + NumbersFromMtoN(m + 1, n);
 }
 
-//ввод и проверка ввода положительных чисел для строк и столбцов
-int InputPositiveNumber(string message, string errormessage)
+//ввод и проверка ввода любых чисел
+int InputNumber(string message, string errormessage)
 {
     while (true)
     {
         Console.Write(message);
         bool isCorrect = int.TryParse(Console.ReadLine(), out int userNumber);
-        if (isCorrect && userNumber > 0)
+        if (isCorrect)
             return userNumber;
         Console.WriteLine(errormessage);
     }
 }
-
