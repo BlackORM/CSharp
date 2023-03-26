@@ -5,10 +5,16 @@ Console.Clear();
 int M = InputPositiveNumber("Введите первое число: ", "Ошибка ввода данных!");
 int N = InputPositiveNumber("Введите второе число: ", "Ошибка ввода данных!");
 
+if (M > N)
+{
+    int temp = M;
+    M = N;
+    N = temp;
+}
 
 string result = NumbersFromMtoN(M, N);
 
-Console.WriteLine($"Натуральные числа от M={M} до N={N}: {result}");
+Console.WriteLine($"Натуральные числа от {M} до {N}: {result}");
 
 
 string NumbersFromMtoN(int m, int n)
