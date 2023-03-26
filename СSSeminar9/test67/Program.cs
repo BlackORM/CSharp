@@ -1,11 +1,9 @@
 ﻿// Сумма цифр введенного числа через рекурсию
 Console.Clear();
 
-int number = InputPositiveNumber("Введите первое число: ", "Ошибка ввода данных!");
+int number = InputNumber("Введите первое число: ", "Ошибка ввода данных!");
 int result = SumDigits(number);
-Console.WriteLine($"Сумма цифр числа {number} = {result}");
-
-
+Console.WriteLine($"Сумма цифр числа {number} = {Math.Abs(result)}");
 
 int SumDigits(int m)
 {
@@ -13,14 +11,14 @@ int SumDigits(int m)
     return SumDigits(m / 10) + m % 10;
 }
 
-//ввод и проверка ввода положительных чисел для строк и столбцов
-int InputPositiveNumber(string message, string errormessage)
+//ввод и проверка ввода любых чисел
+int InputNumber(string message, string errormessage)
 {
     while (true)
     {
         Console.Write(message);
         bool isCorrect = int.TryParse(Console.ReadLine(), out int userNumber);
-        if (isCorrect && userNumber > 0)
+        if (isCorrect)
             return userNumber;
         Console.WriteLine(errormessage);
     }
